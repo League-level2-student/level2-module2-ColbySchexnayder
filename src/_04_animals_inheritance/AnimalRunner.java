@@ -14,11 +14,13 @@ public class AnimalRunner {
 		d.play();
 		d.eat();
 		d.sleep();
+		d.wagTail();
 		
 		Cat c = new Cat("Tom", "black", false);
 		c.printName();
 		c.play();
 		c.eat();
 		c.sleep();
+		
 	}
 }

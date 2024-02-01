@@ -14,5 +14,14 @@ public class PepperoniPizza extends Pizza {
 	
 	// 4. Add the @Override tag
 	
+	@Override
+	public void show() {
+		frame.setTitle("Pepperoni Pizza");
+		label.setIcon(loadImage("pepperoniPizza.png"));
+	}
 	
+	@Override
+	public void receipt() {
+		System.out.println("You purchased a pepperoni pizza for $12");
+	}
 }

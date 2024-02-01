@@ -20,10 +20,18 @@ public class LeagueOptionPane {
 	public static void showMessageDialog(String message) {
 		// 1. Open example.png and make a GUI that looks like that
 		//    The message parameter is what we want to show on our pop-up
+		JFrame frame = new JFrame("message");
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel(message);
+		label.setIcon(loadImage("league.png"));
 		
-		
+		panel.add(label);
+		frame.add(panel);
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
-		//frame.setLocationRelativeTo(null);
+		frame.setLocationRelativeTo(null);
+		frame.pack();
 	}
 	
 	// 3. Call this method in the Runner class
@@ -31,7 +39,19 @@ public class LeagueOptionPane {
 
 	// 4. Create another showMessageDialog() method that lets us also choose the Message and Title 
 	//    2 String parameters (one for the message and one for the title)
-	
+	public static void showMessageDialog(String message, String title) {
+		JFrame frame = new JFrame(title);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel(message);
+		label.setIcon(loadImage("league.png"));
+		
+		panel.add(label);
+		frame.add(panel);
+		frame.setLocationRelativeTo(null);
+		frame.pack();
+	}
 	// 5. Call this method in the Runner class
 	
 	
