@@ -58,6 +58,20 @@ public class LeagueOptionPane {
 	// 6. Create another showMessageDialog() method that lets us choose the Message, Title, and Image
 	//    3 String parameters (one for the message, one for the title, and one for the fileName)
 	
+	public static void showMessageDialog(String message, String title, String image) {
+		JFrame frame = new JFrame(title);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JPanel panel = new JPanel();
+		JLabel label = new JLabel(message);
+		label.setIcon(loadImage(image));
+		
+		panel.add(label);
+		frame.add(panel);
+		frame.setLocationRelativeTo(null);
+		frame.pack();
+	}
+	
 	// 7. Call this method in the Runner class
 	
 	// CHALLENGE: 
